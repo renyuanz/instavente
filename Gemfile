@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'font-awesome-sass', '~> 4.5.0'
 gem 'instagram'
 gem 'materialize-sass'
 gem 'puma'

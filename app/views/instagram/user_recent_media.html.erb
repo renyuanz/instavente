@@ -1,27 +1,11 @@
-<div class="section no-pad-bot" id="index-banner">
-  <div class="container">
-    <div class="row">
-      <h5 class="header col s12 light">Bienvenue, <%= @user.username %></h5>
-    </div>
-    
-    <div class="row" >
-      <% @user_recent_media.each do |media| %>
-        <div class="col s12 m4">
-          <div class="card hoverable">
-            <div class="card-image waves-effect waves-block waves-light">
-              <%= image_tag media.images.low_resolution.url, class: "activator" %>
-            </div><!-- /card-image -->
-            <div class="card-action">
-              <a href="#"><i class="material-icons right">thumb_up</i></a>
-              <a href="#"><i class="material-icons right">comment</i></a>
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Détails:<i class="material-icons right">close</i></span>
-              <p><%= media.caption ? media.caption.text : '' %></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+<div class="row">
+  <br>
+  <h5 class="header col s12 light">Bienvenue,
+    <%= @user.username %></h5>
+</div>
+
+<div class="row">
+  <% @user_recent_media.each do |media| %>
+  <%= render 'components/card', media: media %>
+  <% end %>
 </div>

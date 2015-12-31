@@ -1,0 +1,16 @@
+<div class="col s12 m4">
+  <div class="card hoverable">
+    <div class="card-image waves-effect waves-block waves-light">
+      <%= image_tag media.images.standard_resolution.url, class: "activator" %>
+    </div>
+    <div class="card-action">
+      <a class="red-text text-lighten-1" href="#">
+        <%= icon 'heart' %>
+      </a>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p><%= media.caption ? media.caption.text : '' %></p>
+    </div>
+  </div>
+</div>
