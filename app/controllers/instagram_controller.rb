@@ -16,6 +16,10 @@ class InstagramController < ApplicationController
   private
   
   def set_client
-    @client = Instagram.client(access_token: session[:access_token])
+    if session[:access_token]
+      @client = Instagram.client(access_token: session[:access_token])
+    else
+      redirect_to oauths_connect_path
+    end
   end
 end

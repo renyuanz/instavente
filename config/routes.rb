@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'instagram/user_recent_media'
-  get 'instagram/search' => 'instagram#search'
+  get 'instagram/search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
